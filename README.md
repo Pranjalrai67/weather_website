@@ -17,7 +17,7 @@ A full-stack weather forecasting web application that provides **daily** and **h
 - dotenv for environment configuration
 
 ### ☁️ API Integration
-- Weather data from a third-party weather API (e.g., OpenWeatherMap)
+- Weather data from a Gemini API (e.g., OpenWeatherMap)
 
 ### 🔁 DevOps & CI/CD Pipeline
 - **Git & GitHub** for version control
