@@ -9,8 +9,6 @@ services:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-    volumes:
-      - ./Server:/app
     restart: unless-stopped
 
   frontend:
@@ -21,6 +19,4 @@ services:
       - "5173:5173"
     environment:
       - NODE_ENV=production
-    volumes:
-      - ./Client:/app
     restart: unless-stopped
