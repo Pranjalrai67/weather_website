@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/yourusername/weatherapp.git'
+                git 'https://github.com/Pranjalrai67/weather_website.git'
             }
         }
 
