@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backend:
+    build: ./Server
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ./Server/.env
+
+  frontend:
+    build: ./Client
+    ports:
+      - "3000:3000"
