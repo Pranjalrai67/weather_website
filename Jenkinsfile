@@ -12,10 +12,11 @@ pipeline {
 
     stages {
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Pranjalrai67/weather_website.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/Pranjalrai67/weather_website.git'
+    }
+}
+
 
         stage('Install Dependencies') {
             steps {
