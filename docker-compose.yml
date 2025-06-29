@@ -1,15 +1,26 @@
-version: '3'
+version: '3.8'
+
 services:
   backend:
-    build: ./Server
+    build:
+      context: ./Server
+      dockerfile: DockerFile
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-    env_file:
-      - ./Server/.env
+    volumes:
+      - ./Server:/app
+    restart: unless-stopped
 
   frontend:
-    build: ./Client
+    build:
+      context: ./Client
+      dockerfile: DockerFile
     ports:
-      - "3000:3000"
+      - "3000:5173"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./Client:/app
+    restart: unless-stopped
