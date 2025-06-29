@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "Node18"  // make sure you configure this in Jenkins global tools
+        nodejs "Node18"  // make sure this is configured in Jenkins
     }
 
     environment {
@@ -12,11 +12,10 @@ pipeline {
 
     stages {
         stage('Clone Repository') {
-    steps {
-        git branch: 'main', url: 'https://github.com/Pranjalrai67/weather_website.git'
-    }
-}
-
+            steps {
+                git branch: 'main', url: 'https://github.com/Pranjalrai67/weather_website.git'
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
@@ -32,7 +31,9 @@ pipeline {
         stage('Run Tests') {
             steps {
                 dir("${env.BACKEND_DIR}") {
-                    sh 'npm test || true'
+                    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                        sh 'npm test'
+                    }
                 }
             }
         }
