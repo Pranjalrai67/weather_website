@@ -1,44 +1,5 @@
 import { useState } from "react";
-import axios  from 'axios'
-
-const hourlyForecastData = [
-  {
-    time: "11:00 AM - 12:00 PM",
-    temperature: "28-29°C",
-    conditions: "Cloudy",
-    rainChance: "Low",
-  },
-  {
-    time: "12:00 PM - 1:00 PM",
-    temperature: "29°C",
-    conditions: "Cloudy with a possibility of light rain",
-    rainChance: "Moderate",
-  },
-  {
-    time: "1:00 PM - 2:00 PM",
-    temperature: "29°C",
-    conditions: "Light rain likely",
-    rainChance: "Moderate to High",
-  },
-  {
-    time: "2:00 PM - 3:00 PM",
-    temperature: "29°C",
-    conditions: "Light rain likely",
-    rainChance: "Moderate to High",
-  },
-  {
-    time: "3:00 PM - 4:00 PM",
-    temperature: "28-29°C",
-    conditions: "Light rain expected to continue",
-    rainChance: "Moderate to High",
-  },
-  {
-    time: "4:00 PM - 5:00 PM",
-    temperature: "28°C",
-    conditions: "Light rain possible, becoming more intermittent",
-    rainChance: "Moderate",
-  },
-];
+import axios  from 'axios';
 
 
 
